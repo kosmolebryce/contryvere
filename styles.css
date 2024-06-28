@@ -115,14 +115,11 @@ li {
     /* margin-bottom: 2.5%; */
     /* margin-right: 2.5%; */
     /* margin-left: 2.5%; */
-    padding-left: 0.9%;
-    padding-right: 0.9%;
-    padding-top: 0.9%;
-    padding-bottom: 0.9%;
+    padding: 1%;
     border-radius: 4px;
     font-size: 12pt;
-    background-color: rgb(202, 132, 138, 0.05);
-    color: rgb(216, 200, 189);
+    background-color: rgba(255, 190, 152, 0.2);
+    color: rgb(242, 232, 218);
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 	overflow-x: auto;  /* Enables horizontal scrolling */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -403,8 +400,11 @@ td {
 	margin: 1%;
 }
 
+#index .highlight {
+	margin-left: 2.5%;
+}
+
 #index .highlight p {
-	margin: 1%;
 	white-space: normal;
 }
 
