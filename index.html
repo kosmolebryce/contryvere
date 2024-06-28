@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contryvere | Index</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+        <div class="container">
+            <a href="index.html" style="text-decoration: none">
+                <div class="popbox">
+                    <h1><span style="font-weight: bolder;">CONTRYVERE</span><br />
+                    Home</h1>
+                </div>
+            </a>
+            
+            <button class="toggle-button" onclick="toggleVisibility('index', this)">
+                <span class="icon">+&nbsp;</span><span style='font-family: "Monaspace Krypton", "Menlo", "Courier New", Courier, monospace;'>Index</span>
+            </button>
+            <div id="index" class="toggle-content">
+                <section>
+                    <h3 style="margin: 2.5%">Content</h3>
+                   	<div class="highlight" style="margin: 2.5%;">
+						<p style="margin: 2.5%; border: 4px dotted rgba(242, 232, 218, 0.8); padding: 2.5%;">Use the links below to navigate to the desired resource.</p>
+						<ul style="margin: 5%;">
+							<li><a href="campaign/report.html" style="color: #ffbe98; font-size: 1.2em; font-weight: 500;">Character Reports</a></li>
+						</ul>
+                   	</div>
+                </section>
+            </div>
+        </div>
+	</body>
+        <script>
+               document.addEventListener('DOMContentLoaded', function() {
+                   var allContents = document.querySelectorAll('.toggle-content');
+                   allContents.forEach(function(content) {
+                       content.style.maxHeight = "0px"; // Initializes as collapsed
+                   });
+               });
+               function toggleVisibility(id, button) {
+                   var content = document.getElementById(id);
+                   var icon = button.querySelector('.icon');
+               
+                   if (content.style.maxHeight !== "0px" && content.style.maxHeight !== "") {
+                       content.style.maxHeight = "0px";
+                       icon.textContent = '+  ';
+                   } else {
+                       // Dynamically adjust max-height to the scrollHeight of the content
+                       content.style.maxHeight = content.scrollHeight + "px";
+                       icon.textContent = '-  ';
+                   }
+               }
+        </script>
+</html>

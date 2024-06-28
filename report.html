@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contryvere | Reports</title>
+    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1UT9x_ChmZ2Z-_F5e7h1bpOQz9pdSIanz">
+</head>
+<body>
+    <div class="container">
+        <h6>Report generated at 13:17:46 on June 28, 2024.<h6>
+        <a href="http://contryvere.quest/index.html" style="text-decoration: none">
+            <div class="popbox">
+                <h1><span style="font-weight: bolder;">CONTRYVERE</span><br />
+                    Character Reports
+                </h1>
+            </div>
+        </a>
+        
+        <button class="toggle-button" onclick="toggleVisibility('profiles', this)">
+            <span class="icon">+ &nbsp;</span><span style='font-family: "Monaspace Krypton", "Menlo", "Courier New", Courier, monospace;'>Profiles</span>
+        </button>
+        <div id="profiles" class="toggle-content">
+            <section>
+                <h3>Roster</h3>
+                <div class="table-bg">
+                    <table border="1" class="dataframe highlight">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Name</th>
+      <th>ID</th>
+      <th>Age</th>
+      <th>Alignment</th>
+      <th>Race</th>
+      <th>Universe</th>
+      <th>Occupation</th>
+      <th>Level</th>
+      <th>Class</th>
+      <th>Disease(s)</th>
+      <th>HP</th>
+      <th>Max HP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DM</td>
+      <td>6647378944</td>
+      <td>0</td>
+      <td>Ambivalent</td>
+      <td>Human</td>
+      <td>Omneos</td>
+      <td></td>
+      <td>0</td>
+      <td>Facilitator</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>KOSMO</td>
+      <td>5433618137</td>
+      <td>32</td>
+      <td>Good</td>
+      <td>Human</td>
+      <td>Omneos</td>
+      <td></td>
+      <td>2</td>
+      <td>Wizard</td>
+      <td></td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>TALIA</td>
+      <td>5088509671</td>
+      <td>0</td>
+      <td>Good</td>
+      <td>Tiefling</td>
+      <td>Omneos</td>
+      <td></td>
+      <td>2</td>
+      <td>Cleric</td>
+      <td></td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>XANDRA</td>
+      <td>8086208245</td>
+      <td>0</td>
+      <td>Good</td>
+      <td>Human</td>
+      <td>Omneos</td>
+      <td></td>
+      <td>2</td>
+      <td>Monk</td>
+      <td></td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+                </div>
+            </section>
+        </div>
+
+        <button class="toggle-button" onclick="toggleVisibility('inventories', this)">
+            <span class="icon">+ &nbsp;</span><span style='font-family: "Monaspace Krypton", "Menlo", "Courier New", Courier, monospace;'>Inventories</span>
+        </button>
+        <div id="inventories" class="toggle-content">
+            <section>
+                <h3>Inventory Details by Character</h3>
+                <div class="table-bg">
+                    <p class='paragraph'>The information displayed below is current as of the date and time indicated at the top of the page.</p><h4>XANDRA</h4><p>XANDRA's inventory is empty</p><h4>TALIA</h4><p>TALIA's inventory is empty</p><h4>DM</h4><p>DM's inventory is empty</p><h4>KOSMO</h4><table border="1" class="dataframe highlight">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Item</th>
+      <th>Description</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Explorer's Pack</td>
+      <td>No description has been provided for this item.</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+                </div>
+            </section>
+        </div>
+
+        <button class="toggle-button" onclick="toggleVisibility('spellbooks', this)">
+            <span class="icon">+ &nbsp;</span><span style='font-family: "Monaspace Krypton", "Menlo", "Courier New", Courier, monospace;'>Spellbooks</span>
+        </button>
+        <div id="spellbooks" class="toggle-content">
+            <section>
+                <h3>Spellbook Lists by Character</h3>
+                <div class="table-bg">
+                    <p class='paragraph'>The information displayed below is current as of the date and time indicated at the top of the page.</p><h4>XANDRA</h4><p>XANDRA's spellbook is empty</p><h4>TALIA</h4><p>TALIA's spellbook is empty</p><h4>DM</h4><p>DM's spellbook is empty</p><h4>KOSMO</h4><p>KOSMO's spellbook is empty</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var allContents = document.querySelectorAll('.toggle-content');
+            allContents.forEach(function(content) {
+                content.style.maxHeight = "0px"; // Initializes as collapsed
+            });
+        });
+        function toggleVisibility(id, button) {
+            var content = document.getElementById(id);
+            var icon = button.querySelector('.icon');
+        
+            if (content.style.maxHeight !== "0px" && content.style.maxHeight !== "") {
+                content.style.maxHeight = "0px";
+                icon.textContent = '+  ';
+            } else {
+                // Dynamically adjust max-height to the scrollHeight of the content
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.textContent = '-  ';
+            }
+        }
+    </script>
+</body>
+</html>
