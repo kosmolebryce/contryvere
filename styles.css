@@ -405,6 +405,7 @@ td {
 
 #index p {
 	margin: 1%;
+	white-space: normal;
 }
 
 #index h3 {
