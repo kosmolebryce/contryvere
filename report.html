@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h6>Report generated at 16:02:40 on June 28, 2024.<h6>
+        <h6>Report generated at 22:42:51 on June 28, 2024.</h6>
         <a href="index.html" style="text-decoration: none">
             <div class="popbox">
                 <h1><span style="font-weight: bolder;">CONTRYVERE</span><br />
@@ -139,7 +138,20 @@
             <section>
                 <h3>Spellbook Lists by Character</h3>
                 <div class="table-bg">
-                    <p class='paragraph'>The information displayed below is current as of the date and time indicated at the top of the page.</p><h4>XANDRA</h4><p>XANDRA's spellbook is empty</p><h4>TALIA</h4><p>TALIA's spellbook is empty</p><h4>DM</h4><p>DM's spellbook is empty</p><h4>KOSMO</h4><p>KOSMO's spellbook is empty</p>
+                    <p class='paragraph'>The information displayed below is current as of the date and time indicated at the top of the page.</p><h4>XANDRA</h4><p>XANDRA's spellbook is empty</p><h4>TALIA</h4><table border="1" class="dataframe highlight">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Spell</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Light (Cantrip)</td>
+      <td>Casting Time: 1 action<br>Range: Touch<br>Target: One object that is no larger than 10 feet in any dimension<br>Duration: 1 hour<br><br>--<br><br>The target shines a bright light in a 20-foot radius and dim light<br>for an additional 20 feet. The light can be colored as you like.<br>Completely covering the object with something opaque blocks the light.<br>The spell ends if you cast it again or dismiss it as an action.<br><br>If you target an object held by a hostile creature, that creature<br>must succeed on a Dexterity saving throw to avoid the spell.</td>
+    </tr>
+  </tbody>
+</table><h4>DM</h4><p>DM's spellbook is empty</p><h4>KOSMO</h4><p>KOSMO's spellbook is empty</p>
                 </div>
             </section>
         </div>
@@ -157,11 +169,11 @@
         
             if (content.style.maxHeight !== "0px" && content.style.maxHeight !== "") {
                 content.style.maxHeight = "0px";
-                icon.textContent = '+  ';
+                icon.textContent = '+ \u00A0';
             } else {
                 // Dynamically adjust max-height to the scrollHeight of the content
                 content.style.maxHeight = content.scrollHeight + "px";
-                icon.textContent = '-  ';
+                icon.textContent = '- \u00A0';
             }
         }
     </script>
